@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.fullstack_venta.fullstack_venta.VentaControllerTest" time="3.874" tests="7" errors="0" skipped="0" failures="0" flakes="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/krhisnaoyanedelyanez/Desktop/Inge Desarrollo de Software/BIMESTRE VI/DESARROLLO FULLSTACK/EFT/FULLSTACK-VENTA/target/test-classes:/Users/krhisnaoyanedelyanez/Desktop/Inge Desarrollo de Software/BIMESTRE VI/DESARROLLO FULLSTACK/EFT/FULLSTACK-VENTA/target/classes:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.5.12/spring-boot-starter-actuator-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.12/spring-boot-starter-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot/3.5.12/spring-boot-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.12/spring-boot-autoconfigure-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.12/spring-boot-starter-logging-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/ch/qos/logback/logback-classic/1.5.32/logback-classic-1.5.32.jar:/Users/krhisnaoyanedelyanez/.m2/repository/ch/qos/logback/logback-core/1.5.32/logback-core-1.5.32.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.5.12/spring-boot-actuator-autoconfigure-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-actuator/3.5.12/spring-boot-actuator-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.4/jackson-databind-2.19.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.4/jackson-annotations-2.19.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.4/jackson-core-2.19.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.4/jackson-datatype-jsr310-2.19.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/io/micrometer/micrometer-observation/1.15.10/micrometer-observation-1.15.10.jar:/Users/krhisnaoyanedelyanez/.m2/repository/io/micrometer/micrometer-commons/1.15.10/micrometer-commons-1.15.10.jar:/Users/krhisnaoyanedelyanez/.m2/repository/io/micrometer/micrometer-jakarta9/1.15.10/micrometer-jakarta9-1.15.10.jar:/Users/krhisnaoyanedelyanez/.m2/repository/io/micrometer/micrometer-core/1.15.10/micrometer-core-1.15.10.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.5.12/spring-boot-starter-data-jpa-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.5.12/spring-boot-starter-jdbc-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/zaxxer/HikariCP/6.3.3/HikariCP-6.3.3.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-jdbc/6.2.17/spring-jdbc-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/hibernate/orm/hibernate-core/6.6.44.Final/hibernate-core-6.6.44.Final.jar:/Users/krhisnaoyanedelyanez/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/jboss/logging/jboss-logging/3.6.3.Final/jboss-logging-3.6.3.Final.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/Users/krhisnaoyanedelyanez/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/fasterxml/classmate/1.7.3/classmate-1.7.3.jar:/Users/krhisnaoyanedelyanez/.m2/repository/net/bytebuddy/byte-buddy/1.17.8/byte-buddy-1.17.8.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.6/jaxb-runtime-4.0.6.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.6/jaxb-core-4.0.6.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/eclipse/angus/angus-activation/2.0.3/angus-activation-2.0.3.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/glassfish/jaxb/txw2/4.0.6/txw2-4.0.6.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/data/spring-data-jpa/3.5.10/spring-data-jpa-3.5.10.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/data/spring-data-commons/3.5.10/spring-data-commons-3.5.10.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-orm/6.2.17/spring-orm-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-context/6.2.17/spring-context-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-aop/6.2.17/spring-aop-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-tx/6.2.17/spring-tx-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-beans/6.2.17/spring-beans-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-aspects/6.2.17/spring-aspects-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/aspectj/aspectjweaver/1.9.25.1/aspectjweaver-1.9.25.1.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.5.12/spring-boot-starter-validation-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.52/tomcat-embed-el-10.1.52.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.3.Final/hibernate-validator-8.0.3.Final.jar:/Users/krhisnaoyanedelyanez/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.5.12/spring-boot-starter-web-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.12/spring-boot-starter-json-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.19.4/jackson-datatype-jdk8-2.19.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.19.4/jackson-module-parameter-names-2.19.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.5.12/spring-boot-starter-tomcat-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.52/tomcat-embed-core-10.1.52.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.52/tomcat-embed-websocket-10.1.52.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-web/6.2.17/spring-web-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-webmvc/6.2.17/spring-webmvc-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-expression/6.2.17/spring-expression-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/jdbc/ucp11/23.7.0.25.01/ucp11-23.7.0.25.01.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/jdbc/rsi/23.7.0.25.01/rsi-23.7.0.25.01.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/ha/simplefan/23.7.0.25.01/simplefan-23.7.0.25.01.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/ha/ons/23.7.0.25.01/ons-23.7.0.25.01.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/nls/orai18n/23.7.0.25.01/orai18n-23.7.0.25.01.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/xml/xdb/23.7.0.25.01/xdb-23.7.0.25.01.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/xml/xmlparserv2/23.7.0.25.01/xmlparserv2-23.7.0.25.01.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/security/oraclepki/21.5.0.0/oraclepki-21.5.0.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/security/osdt_cert/21.5.0.0/osdt_cert-21.5.0.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/security/osdt_core/21.5.0.0/osdt_core-21.5.0.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/jdbc/ojdbc11/23.7.0.25.01/ojdbc11-23.7.0.25.01.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.5.12/spring-boot-starter-test-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-test/3.5.12/spring-boot-test-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.5.12/spring-boot-test-autoconfigure-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.4/jakarta.xml.bind-api-4.0.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.4/jakarta.activation-api-2.1.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/assertj/assertj-core/3.27.7/assertj-core-3.27.7.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/junit/jupiter/junit-jupiter/5.12.2/junit-jupiter-5.12.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.2/junit-jupiter-api-5.12.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.12.2/junit-jupiter-params-5.12.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.2/junit-jupiter-engine-5.12.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/mockito/mockito-core/5.17.0/mockito-core-5.17.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/mockito/mockito-junit-jupiter/5.17.0/mockito-junit-jupiter-5.17.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-core/6.2.17/spring-core-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-jcl/6.2.17/spring-jcl-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-test/6.2.17/spring-test-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/xmlunit/xmlunit-core/2.10.4/xmlunit-core-2.10.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="America/Santiago"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="APPLICATION_NAME" value="fullstack_venta"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="419"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk@21/21.0.11/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/krhisnaoyanedelyanez/Desktop/Inge Desarrollo de Software/BIMESTRE VI/DESARROLLO FULLSTACK/EFT/FULLSTACK-VENTA/target/surefire/surefirebooter-20260510225722249_3.jar /Users/krhisnaoyanedelyanez/Desktop/Inge Desarrollo de Software/BIMESTRE VI/DESARROLLO FULLSTACK/EFT/FULLSTACK-VENTA/target/surefire 2026-05-10T22-57-22_166-jvmRun1 surefire-20260510225722249_1tmp surefire_0-20260510225722249_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/krhisnaoyanedelyanez/Desktop/Inge Desarrollo de Software/BIMESTRE VI/DESARROLLO FULLSTACK/EFT/FULLSTACK-VENTA/target/test-classes:/Users/krhisnaoyanedelyanez/Desktop/Inge Desarrollo de Software/BIMESTRE VI/DESARROLLO FULLSTACK/EFT/FULLSTACK-VENTA/target/classes:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.5.12/spring-boot-starter-actuator-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.12/spring-boot-starter-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot/3.5.12/spring-boot-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.12/spring-boot-autoconfigure-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.12/spring-boot-starter-logging-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/ch/qos/logback/logback-classic/1.5.32/logback-classic-1.5.32.jar:/Users/krhisnaoyanedelyanez/.m2/repository/ch/qos/logback/logback-core/1.5.32/logback-core-1.5.32.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.5.12/spring-boot-actuator-autoconfigure-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-actuator/3.5.12/spring-boot-actuator-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.4/jackson-databind-2.19.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.4/jackson-annotations-2.19.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.4/jackson-core-2.19.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.4/jackson-datatype-jsr310-2.19.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/io/micrometer/micrometer-observation/1.15.10/micrometer-observation-1.15.10.jar:/Users/krhisnaoyanedelyanez/.m2/repository/io/micrometer/micrometer-commons/1.15.10/micrometer-commons-1.15.10.jar:/Users/krhisnaoyanedelyanez/.m2/repository/io/micrometer/micrometer-jakarta9/1.15.10/micrometer-jakarta9-1.15.10.jar:/Users/krhisnaoyanedelyanez/.m2/repository/io/micrometer/micrometer-core/1.15.10/micrometer-core-1.15.10.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.5.12/spring-boot-starter-data-jpa-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.5.12/spring-boot-starter-jdbc-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/zaxxer/HikariCP/6.3.3/HikariCP-6.3.3.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-jdbc/6.2.17/spring-jdbc-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/hibernate/orm/hibernate-core/6.6.44.Final/hibernate-core-6.6.44.Final.jar:/Users/krhisnaoyanedelyanez/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/jboss/logging/jboss-logging/3.6.3.Final/jboss-logging-3.6.3.Final.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/Users/krhisnaoyanedelyanez/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/fasterxml/classmate/1.7.3/classmate-1.7.3.jar:/Users/krhisnaoyanedelyanez/.m2/repository/net/bytebuddy/byte-buddy/1.17.8/byte-buddy-1.17.8.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.6/jaxb-runtime-4.0.6.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.6/jaxb-core-4.0.6.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/eclipse/angus/angus-activation/2.0.3/angus-activation-2.0.3.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/glassfish/jaxb/txw2/4.0.6/txw2-4.0.6.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/data/spring-data-jpa/3.5.10/spring-data-jpa-3.5.10.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/data/spring-data-commons/3.5.10/spring-data-commons-3.5.10.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-orm/6.2.17/spring-orm-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-context/6.2.17/spring-context-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-aop/6.2.17/spring-aop-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-tx/6.2.17/spring-tx-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-beans/6.2.17/spring-beans-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-aspects/6.2.17/spring-aspects-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/aspectj/aspectjweaver/1.9.25.1/aspectjweaver-1.9.25.1.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.5.12/spring-boot-starter-validation-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.52/tomcat-embed-el-10.1.52.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.3.Final/hibernate-validator-8.0.3.Final.jar:/Users/krhisnaoyanedelyanez/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.5.12/spring-boot-starter-web-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.12/spring-boot-starter-json-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.19.4/jackson-datatype-jdk8-2.19.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.19.4/jackson-module-parameter-names-2.19.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.5.12/spring-boot-starter-tomcat-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.52/tomcat-embed-core-10.1.52.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.52/tomcat-embed-websocket-10.1.52.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-web/6.2.17/spring-web-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-webmvc/6.2.17/spring-webmvc-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-expression/6.2.17/spring-expression-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/jdbc/ucp11/23.7.0.25.01/ucp11-23.7.0.25.01.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/jdbc/rsi/23.7.0.25.01/rsi-23.7.0.25.01.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/ha/simplefan/23.7.0.25.01/simplefan-23.7.0.25.01.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/ha/ons/23.7.0.25.01/ons-23.7.0.25.01.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/nls/orai18n/23.7.0.25.01/orai18n-23.7.0.25.01.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/xml/xdb/23.7.0.25.01/xdb-23.7.0.25.01.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/xml/xmlparserv2/23.7.0.25.01/xmlparserv2-23.7.0.25.01.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/security/oraclepki/21.5.0.0/oraclepki-21.5.0.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/security/osdt_cert/21.5.0.0/osdt_cert-21.5.0.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/security/osdt_core/21.5.0.0/osdt_core-21.5.0.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/oracle/database/jdbc/ojdbc11/23.7.0.25.01/ojdbc11-23.7.0.25.01.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.5.12/spring-boot-starter-test-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-test/3.5.12/spring-boot-test-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.5.12/spring-boot-test-autoconfigure-3.5.12.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.4/jakarta.xml.bind-api-4.0.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.4/jakarta.activation-api-2.1.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/assertj/assertj-core/3.27.7/assertj-core-3.27.7.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/junit/jupiter/junit-jupiter/5.12.2/junit-jupiter-5.12.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.12.2/junit-jupiter-api-5.12.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/junit/platform/junit-platform-commons/1.12.2/junit-platform-commons-1.12.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.12.2/junit-jupiter-params-5.12.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.12.2/junit-jupiter-engine-5.12.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/junit/platform/junit-platform-engine/1.12.2/junit-platform-engine-1.12.2.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/mockito/mockito-core/5.17.0/mockito-core-5.17.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/mockito/mockito-junit-jupiter/5.17.0/mockito-junit-jupiter-5.17.0.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/Users/krhisnaoyanedelyanez/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-core/6.2.17/spring-core-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-jcl/6.2.17/spring-jcl-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/springframework/spring-test/6.2.17/spring-test-6.2.17.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/xmlunit/xmlunit-core/2.10.4/xmlunit-core-2.10.4.jar:/Users/krhisnaoyanedelyanez/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/krhisnaoyanedelyanez"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-04-21"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk@21/21.0.11/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/krhisnaoyanedelyanez/Desktop/Inge Desarrollo de Software/BIMESTRE VI/DESARROLLO FULLSTACK/EFT/FULLSTACK-VENTA"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/krhisnaoyanedelyanez/Desktop/Inge Desarrollo de Software/BIMESTRE VI/DESARROLLO FULLSTACK/EFT/FULLSTACK-VENTA/target/surefire/surefirebooter-20260510225722249_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="21.0.11"/>
+    <property name="user.name" value="krhisnaoyanedelyanez"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.7.4"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/krhisnaoyanedelyanez/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/vy/9lv_s96x1zq699h2mzyvgdrr0000gn/T/"/>
+    <property name="java.version" value="21.0.11"/>
+    <property name="user.dir" value="/Users/krhisnaoyanedelyanez/Desktop/Inge Desarrollo de Software/BIMESTRE VI/DESARROLLO FULLSTACK/EFT/FULLSTACK-VENTA"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="17245"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/krhisnaoyanedelyanez/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="21.0.11"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[fullstack_venta] "/>
+  </properties>
+  <testcase name="cancelar_noExistente_retorna404" classname="com.fullstack_venta.fullstack_venta.VentaControllerTest" time="0.243">
+    <system-out><![CDATA[22:57:23.126 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.fullstack_venta.fullstack_venta.VentaControllerTest]: VentaControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:57:23.295 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.fullstack_venta.fullstack_venta.FullstackVentaApplication for test class com.fullstack_venta.fullstack_venta.VentaControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.12)
+
+2026-05-10T22:57:23.852-04:00 DEBUG 17245 --- [fullstack_venta] [kground-preinit] o.h.v.i.xml.config.ValidationXmlParser   : Trying to load META-INF/validation.xml for XML based Validator configuration.
+2026-05-10T22:57:23.854-04:00 DEBUG 17245 --- [fullstack_venta] [kground-preinit] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via TCCL
+2026-05-10T22:57:23.854-04:00 DEBUG 17245 --- [fullstack_venta] [kground-preinit] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2026-05-10T22:57:23.855-04:00 DEBUG 17245 --- [fullstack_venta] [kground-preinit] o.h.v.i.xml.config.ValidationXmlParser   : No META-INF/validation.xml found. Using annotation based configuration only.
+2026-05-10T22:57:23.863-04:00 DEBUG 17245 --- [fullstack_venta] [kground-preinit] o.h.v.i.e.resolver.TraversableResolvers  : Found jakarta.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2026-05-10T22:57:23.865-04:00 DEBUG 17245 --- [fullstack_venta] [kground-preinit] o.h.v.i.e.resolver.TraversableResolvers  : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2026-05-10T22:57:23.893-04:00 DEBUG 17245 --- [fullstack_venta] [kground-preinit] .h.v.m.ResourceBundleMessageInterpolator : Loaded expression factory via original TCCL
+2026-05-10T22:57:23.897-04:00  INFO 17245 --- [fullstack_venta] [           main] c.f.fullstack_venta.VentaControllerTest  : Starting VentaControllerTest using Java 21.0.11 with PID 17245 (started by krhisnaoyanedelyanez in /Users/krhisnaoyanedelyanez/Desktop/Inge Desarrollo de Software/BIMESTRE VI/DESARROLLO FULLSTACK/EFT/FULLSTACK-VENTA)
+2026-05-10T22:57:23.897-04:00  INFO 17245 --- [fullstack_venta] [           main] c.f.fullstack_venta.VentaControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2026-05-10T22:57:23.898-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.boot.SpringApplication               : Loading source class com.fullstack_venta.fullstack_venta.FullstackVentaApplication
+2026-05-10T22:57:23.912-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@294bdeb4
+2026-05-10T22:57:23.938-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2026-05-10T22:57:23.959-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2026-05-10T22:57:23.994-04:00 DEBUG 17245 --- [fullstack_venta] [kground-preinit] .i.e.ValidatorFactoryConfigurationHelper : HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2026-05-10T22:57:23.999-04:00 DEBUG 17245 --- [fullstack_venta] [kground-preinit] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2026-05-10T22:57:23.999-04:00 DEBUG 17245 --- [fullstack_venta] [kground-preinit] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2026-05-10T22:57:23.999-04:00 DEBUG 17245 --- [fullstack_venta] [kground-preinit] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2026-05-10T22:57:23.999-04:00 DEBUG 17245 --- [fullstack_venta] [kground-preinit] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2026-05-10T22:57:24.000-04:00 DEBUG 17245 --- [fullstack_venta] [kground-preinit] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2026-05-10T22:57:24.037-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.c.a.ClassPathBeanDefinitionScanner   : Identified candidate component class: file [/Users/krhisnaoyanedelyanez/Desktop/Inge Desarrollo de Software/BIMESTRE VI/DESARROLLO FULLSTACK/EFT/FULLSTACK-VENTA/target/classes/com/fullstack_venta/fullstack_venta/controller/VentaController.class]
+2026-05-10T22:57:24.048-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.c.a.ClassPathBeanDefinitionScanner   : Identified candidate component class: file [/Users/krhisnaoyanedelyanez/Desktop/Inge Desarrollo de Software/BIMESTRE VI/DESARROLLO FULLSTACK/EFT/FULLSTACK-VENTA/target/classes/com/fullstack_venta/fullstack_venta/exception/GlobalExceptionHandler.class]
+2026-05-10T22:57:24.712-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.context.ImportsContextCustomizer$ImportsCleanupPostProcessor'
+2026-05-10T22:57:24.721-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor'
+2026-05-10T22:57:25.437-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2026-05-10T22:57:25.438-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'bootstrapExecutorAliasPostProcessor'
+2026-05-10T22:57:25.440-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'preserveErrorControllerTargetClassPostProcessor'
+2026-05-10T22:57:25.441-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2026-05-10T22:57:25.445-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2026-05-10T22:57:25.446-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2026-05-10T22:57:25.449-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2026-05-10T22:57:25.450-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor$SpyPostProcessor'
+2026-05-10T22:57:25.450-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor'
+2026-05-10T22:57:25.451-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.internalConfigurationPropertiesBinder'
+2026-05-10T22:57:25.454-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'methodValidationPostProcessor'
+2026-05-10T22:57:25.458-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'methodValidationPostProcessor' via factory method to bean named 'environment'
+2026-05-10T22:57:25.460-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter'
+2026-05-10T22:57:25.479-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'projectingArgumentResolverBeanPostProcessor'
+2026-05-10T22:57:25.496-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.u.c.s.UiApplicationContextUtils      : Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@1c297897]
+2026-05-10T22:57:25.497-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'applicationTaskExecutor'
+2026-05-10T22:57:25.497-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$TaskExecutorConfiguration'
+2026-05-10T22:57:25.500-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'threadPoolTaskExecutorBuilder'
+2026-05-10T22:57:25.501-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$ThreadPoolTaskExecutorBuilderConfiguration'
+2026-05-10T22:57:25.502-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2026-05-10T22:57:25.503-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2026-05-10T22:57:25.516-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'threadPoolTaskExecutorBuilder' via factory method to bean named 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2026-05-10T22:57:25.520-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'applicationTaskExecutor' via factory method to bean named 'threadPoolTaskExecutorBuilder'
+2026-05-10T22:57:25.528-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2026-05-10T22:57:25.529-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.test.context.support.internalDynamicPropertyRegistrarBeanInitializer'
+2026-05-10T22:57:25.530-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'fullstackVentaApplication'
+2026-05-10T22:57:25.532-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'ventaController'
+2026-05-10T22:57:25.537-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'ventaController' via constructor to bean named 'com.fullstack_venta.fullstack_venta.service.VentaService#0'
+2026-05-10T22:57:25.538-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'globalExceptionHandler'
+2026-05-10T22:57:25.541-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.AutoConfigurationPackages'
+2026-05-10T22:57:25.541-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration'
+2026-05-10T22:57:25.542-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$SimpleAsyncTaskExecutorBuilderConfiguration' via constructor to bean named 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2026-05-10T22:57:25.543-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'simpleAsyncTaskExecutorBuilder'
+2026-05-10T22:57:25.545-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$AsyncConfigurerConfiguration'
+2026-05-10T22:57:25.545-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'applicationTaskExecutorAsyncConfigurer'
+2026-05-10T22:57:25.546-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'applicationTaskExecutorAsyncConfigurer' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@ecfbe91'
+2026-05-10T22:57:25.547-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutorConfigurations$BootstrapExecutorConfiguration'
+2026-05-10T22:57:25.547-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration'
+2026-05-10T22:57:25.548-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration'
+2026-05-10T22:57:25.548-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'defaultValidator'
+2026-05-10T22:57:25.549-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'defaultValidator' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@294bdeb4'
+2026-05-10T22:57:25.550-04:00 DEBUG 17245 --- [fullstack_venta] [           main] .h.v.m.ResourceBundleMessageInterpolator : Loaded expression factory via original TCCL
+2026-05-10T22:57:25.553-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.h.v.i.e.AbstractConfigurationImpl      : Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2026-05-10T22:57:25.554-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.h.v.i.e.AbstractConfigurationImpl      : Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2026-05-10T22:57:25.555-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.h.v.i.xml.config.ValidationXmlParser   : Trying to load META-INF/validation.xml for XML based Validator configuration.
+2026-05-10T22:57:25.555-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via user class loader
+2026-05-10T22:57:25.555-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via TCCL
+2026-05-10T22:57:25.555-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.h.v.i.xml.config.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2026-05-10T22:57:25.556-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.h.v.i.xml.config.ValidationXmlParser   : No META-INF/validation.xml found. Using annotation based configuration only.
+2026-05-10T22:57:25.556-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.h.v.i.e.resolver.TraversableResolvers  : Found jakarta.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2026-05-10T22:57:25.556-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.h.v.i.e.resolver.TraversableResolvers  : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2026-05-10T22:57:25.558-04:00 DEBUG 17245 --- [fullstack_venta] [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2026-05-10T22:57:25.558-04:00 DEBUG 17245 --- [fullstack_venta] [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2026-05-10T22:57:25.558-04:00 DEBUG 17245 --- [fullstack_venta] [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+2026-05-10T22:57:25.558-04:00 DEBUG 17245 --- [fullstack_venta] [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2026-05-10T22:57:25.559-04:00 DEBUG 17245 --- [fullstack_venta] [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2026-05-10T22:57:25.559-04:00 DEBUG 17245 --- [fullstack_venta] [           main] .i.e.ValidatorFactoryConfigurationHelper : HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2026-05-10T22:57:25.560-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration'
+2026-05-10T22:57:25.561-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'error'
+2026-05-10T22:57:25.561-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'beanNameViewResolver'
+2026-05-10T22:57:25.563-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration'
+2026-05-10T22:57:25.564-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2026-05-10T22:57:25.566-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration' via constructor to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@294bdeb4'
+2026-05-10T22:57:25.567-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration' via constructor to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2026-05-10T22:57:25.567-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+2026-05-10T22:57:25.570-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration'
+2026-05-10T22:57:25.571-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2026-05-10T22:57:25.582-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration' via constructor to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2026-05-10T22:57:25.583-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'errorAttributes'
+2026-05-10T22:57:25.584-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'basicErrorController'
+2026-05-10T22:57:25.585-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'basicErrorController' via factory method to bean named 'errorAttributes'
+2026-05-10T22:57:25.587-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'errorPageCustomizer'
+2026-05-10T22:57:25.588-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'dispatcherServletPath'
+2026-05-10T22:57:25.588-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration'
+2026-05-10T22:57:25.588-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'dispatcherServletPath' via factory method to bean named 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+2026-05-10T22:57:25.589-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'errorPageCustomizer' via factory method to bean named 'dispatcherServletPath'
+2026-05-10T22:57:25.590-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration'
+2026-05-10T22:57:25.591-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration' via constructor to bean named 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+2026-05-10T22:57:25.591-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration' via constructor to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2026-05-10T22:57:25.591-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@ecfbe91'
+2026-05-10T22:57:25.598-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter'
+2026-05-10T22:57:25.599-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter' via constructor to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2026-05-10T22:57:25.599-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter' via constructor to bean named 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+2026-05-10T22:57:25.599-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@ecfbe91'
+2026-05-10T22:57:25.602-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.data.web.config.SpringDataWebConfiguration'
+2026-05-10T22:57:25.603-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.data.web.config.SpringDataWebConfiguration' via constructor to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@294bdeb4'
+2026-05-10T22:57:25.606-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'welcomePageHandlerMapping'
+2026-05-10T22:57:25.607-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcConversionService'
+2026-05-10T22:57:25.623-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcResourceUrlProvider'
+2026-05-10T22:57:25.625-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageHandlerMapping' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@294bdeb4'
+2026-05-10T22:57:25.625-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageHandlerMapping' via factory method to bean named 'mvcConversionService'
+2026-05-10T22:57:25.626-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2026-05-10T22:57:25.653-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'welcomePageNotAcceptableHandlerMapping'
+2026-05-10T22:57:25.653-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageNotAcceptableHandlerMapping' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@294bdeb4'
+2026-05-10T22:57:25.653-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageNotAcceptableHandlerMapping' via factory method to bean named 'mvcConversionService'
+2026-05-10T22:57:25.654-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageNotAcceptableHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2026-05-10T22:57:25.657-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'localeResolver'
+2026-05-10T22:57:25.658-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'themeResolver'
+2026-05-10T22:57:25.659-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'flashMapManager'
+2026-05-10T22:57:25.662-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'viewNameTranslator'
+2026-05-10T22:57:25.663-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcValidator'
+2026-05-10T22:57:25.665-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcContentNegotiationManager'
+2026-05-10T22:57:25.670-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'requestMappingHandlerMapping'
+2026-05-10T22:57:25.671-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
+2026-05-10T22:57:25.672-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcConversionService'
+2026-05-10T22:57:25.672-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2026-05-10T22:57:25.759-04:00 DEBUG 17245 --- [fullstack_venta] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2026-05-10T22:57:25.761-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcPatternParser'
+2026-05-10T22:57:25.763-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcUrlPathHelper'
+2026-05-10T22:57:25.766-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcPathMatcher'
+2026-05-10T22:57:25.767-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'viewControllerHandlerMapping'
+2026-05-10T22:57:25.768-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'viewControllerHandlerMapping' via factory method to bean named 'mvcConversionService'
+2026-05-10T22:57:25.769-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'viewControllerHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2026-05-10T22:57:25.771-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'beanNameHandlerMapping'
+2026-05-10T22:57:25.776-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'beanNameHandlerMapping' via factory method to bean named 'mvcConversionService'
+2026-05-10T22:57:25.777-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'beanNameHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2026-05-10T22:57:25.788-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'routerFunctionMapping'
+2026-05-10T22:57:25.793-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'routerFunctionMapping' via factory method to bean named 'mvcConversionService'
+2026-05-10T22:57:25.793-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'routerFunctionMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2026-05-10T22:57:25.797-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'messageConverters'
+2026-05-10T22:57:25.797-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration'
+2026-05-10T22:57:25.808-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'stringHttpMessageConverter'
+2026-05-10T22:57:25.808-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration'
+2026-05-10T22:57:25.810-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'stringHttpMessageConverter' via factory method to bean named 'environment'
+2026-05-10T22:57:25.828-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mappingJackson2HttpMessageConverter'
+2026-05-10T22:57:25.829-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration'
+2026-05-10T22:57:25.832-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jacksonObjectMapper'
+2026-05-10T22:57:25.832-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration'
+2026-05-10T22:57:25.834-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration'
+2026-05-10T22:57:25.836-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'standardJacksonObjectMapperBuilderCustomizer'
+2026-05-10T22:57:25.837-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration'
+2026-05-10T22:57:25.839-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties'
+2026-05-10T22:57:25.857-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'standardJacksonObjectMapperBuilderCustomizer' via factory method to bean named 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties'
+2026-05-10T22:57:25.860-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'parameterNamesModule'
+2026-05-10T22:57:25.861-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration'
+2026-05-10T22:57:25.869-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jsonMixinModule'
+2026-05-10T22:57:25.869-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonMixinConfiguration'
+2026-05-10T22:57:25.871-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jsonMixinModuleEntries'
+2026-05-10T22:57:25.872-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jsonMixinModuleEntries' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@294bdeb4'
+2026-05-10T22:57:25.873-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.fullstack_venta.fullstack_venta'. Automatic @Repository and @Entity scanning is enabled.
+2026-05-10T22:57:25.889-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jsonMixinModule' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@294bdeb4'
+2026-05-10T22:57:25.889-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jsonMixinModule' via factory method to bean named 'jsonMixinModuleEntries'
+2026-05-10T22:57:25.892-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jsonComponentModule'
+2026-05-10T22:57:25.893-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration'
+2026-05-10T22:57:25.900-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jacksonGeoModule'
+2026-05-10T22:57:25.900-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration'
+2026-05-10T22:57:25.904-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'springDataWebSettings'
+2026-05-10T22:57:25.904-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration'
+2026-05-10T22:57:25.904-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.data.web-org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties'
+2026-05-10T22:57:25.907-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration' via constructor to bean named 'spring.data.web-org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties'
+2026-05-10T22:57:25.917-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'pageModule'
+2026-05-10T22:57:25.922-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonObjectMapperBuilder' via factory method to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@294bdeb4'
+2026-05-10T22:57:25.923-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonObjectMapperBuilder' via factory method to bean named 'standardJacksonObjectMapperBuilderCustomizer'
+2026-05-10T22:57:25.928-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonObjectMapper' via factory method to bean named 'jacksonObjectMapperBuilder'
+2026-05-10T22:57:25.943-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mappingJackson2HttpMessageConverter' via factory method to bean named 'jacksonObjectMapper'
+2026-05-10T22:57:25.993-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'resourceHandlerMapping'
+2026-05-10T22:57:25.994-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'resourceHandlerMapping' via factory method to bean named 'mvcContentNegotiationManager'
+2026-05-10T22:57:25.994-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'resourceHandlerMapping' via factory method to bean named 'mvcConversionService'
+2026-05-10T22:57:25.994-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'resourceHandlerMapping' via factory method to bean named 'mvcResourceUrlProvider'
+2026-05-10T22:57:26.006-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-05-10T22:57:26.006-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'defaultServletHandlerMapping'
+2026-05-10T22:57:26.007-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'requestMappingHandlerAdapter'
+2026-05-10T22:57:26.008-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'mvcContentNegotiationManager'
+2026-05-10T22:57:26.009-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'mvcConversionService'
+2026-05-10T22:57:26.009-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'mvcValidator'
+2026-05-10T22:57:26.023-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'sortResolver'
+2026-05-10T22:57:26.028-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'sortCustomizer'
+2026-05-10T22:57:26.039-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'pageableResolver'
+2026-05-10T22:57:26.044-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'pageableCustomizer'
+2026-05-10T22:57:26.075-04:00 DEBUG 17245 --- [fullstack_venta] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-05-10T22:57:26.099-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcViewResolver'
+2026-05-10T22:57:26.100-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mvcViewResolver' via factory method to bean named 'mvcContentNegotiationManager'
+2026-05-10T22:57:26.103-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'defaultViewResolver'
+2026-05-10T22:57:26.107-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'viewResolver'
+2026-05-10T22:57:26.108-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'viewResolver' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@ecfbe91'
+2026-05-10T22:57:26.109-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'viewResolver'
+2026-05-10T22:57:26.116-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'handlerFunctionAdapter'
+2026-05-10T22:57:26.118-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mvcUriComponentsContributor'
+2026-05-10T22:57:26.120-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mvcUriComponentsContributor' via factory method to bean named 'mvcConversionService'
+2026-05-10T22:57:26.120-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mvcUriComponentsContributor' via factory method to bean named 'requestMappingHandlerAdapter'
+2026-05-10T22:57:26.121-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'httpRequestHandlerAdapter'
+2026-05-10T22:57:26.122-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'simpleControllerHandlerAdapter'
+2026-05-10T22:57:26.122-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'handlerExceptionResolver'
+2026-05-10T22:57:26.123-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'handlerExceptionResolver' via factory method to bean named 'mvcContentNegotiationManager'
+2026-05-10T22:57:26.129-04:00 DEBUG 17245 --- [fullstack_venta] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-05-10T22:57:26.132-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'requestContextFilter'
+2026-05-10T22:57:26.134-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration'
+2026-05-10T22:57:26.135-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'formContentFilter'
+2026-05-10T22:57:26.138-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration'
+2026-05-10T22:57:26.138-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.data.web.config.ProjectingArgumentResolverRegistrar'
+2026-05-10T22:57:26.138-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'offsetResolver'
+2026-05-10T22:57:26.141-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration'
+2026-05-10T22:57:26.141-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration' via constructor to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2026-05-10T22:57:26.142-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'characterEncodingFilter'
+2026-05-10T22:57:26.142-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'localeCharsetMappingsCustomizer'
+2026-05-10T22:57:26.143-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcConfiguration'
+2026-05-10T22:57:26.144-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcConfiguration' via constructor to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@294bdeb4'
+2026-05-10T22:57:26.144-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcConfiguration' via constructor to bean named 'spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties'
+2026-05-10T22:57:26.144-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mockMvcBuilder'
+2026-05-10T22:57:26.145-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'springBootMockMvcBuilderCustomizer'
+2026-05-10T22:57:26.149-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mockMvcBuilder' via factory method to bean named 'springBootMockMvcBuilderCustomizer'
+2026-05-10T22:57:26.156-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-05-10T22:57:26.156-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: 
+2026-05-10T22:57:26.160-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mockMvc'
+2026-05-10T22:57:26.160-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mockMvc' via factory method to bean named 'mockMvcBuilder'
+2026-05-10T22:57:26.163-04:00 DEBUG 17245 --- [fullstack_venta] [           main] s.b.w.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
+2026-05-10T22:57:26.163-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.w.s.f.OrderedFormContentFilter     : Filter 'formContentFilter' configured for use
+2026-05-10T22:57:26.163-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.w.s.f.OrderedRequestContextFilter  : Filter 'requestContextFilter' configured for use
+2026-05-10T22:57:26.170-04:00  INFO 17245 --- [fullstack_venta] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-05-10T22:57:26.171-04:00  INFO 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-10T22:57:26.171-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Detected AcceptHeaderLocaleResolver
+2026-05-10T22:57:26.171-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Detected FixedThemeResolver
+2026-05-10T22:57:26.172-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3b0d3a63
+2026-05-10T22:57:26.172-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1a1c21b4
+2026-05-10T22:57:26.172-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-05-10T22:57:26.173-04:00  INFO 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-05-10T22:57:26.175-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.autoconfigure.web.servlet.MockMvcTesterConfiguration'
+2026-05-10T22:57:26.175-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mockMvcTester'
+2026-05-10T22:57:26.176-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mockMvcTester' via factory method to bean named 'mockMvc'
+2026-05-10T22:57:26.180-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'dispatcherServlet'
+2026-05-10T22:57:26.180-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'dispatcherServlet' via factory method to bean named 'mockMvc'
+2026-05-10T22:57:26.194-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase -2147483647
+2026-05-10T22:57:26.194-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'springBootLoggingLifecycle'
+2026-05-10T22:57:26.194-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 1073741823
+2026-05-10T22:57:26.201-04:00 DEBUG 17245 --- [fullstack_venta] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+   ErrorMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   ErrorMvcAutoConfiguration#basicErrorController matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.error.ErrorController; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration#errorAttributes matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.error.ErrorAttributes; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration matched:
+      - @ConditionalOnBooleanProperty (server.error.whitelabel.enabled=true) matched (OnPropertyCondition)
+      - ErrorTemplate Missing did not find error template view (ErrorMvcAutoConfiguration.ErrorTemplateMissingCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#beanNameViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#defaultErrorView matched:
+      - @ConditionalOnMissingBean (names: error; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpEncodingAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.filter.CharacterEncodingFilter' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnBooleanProperty (server.servlet.encoding.enabled=true) matched (OnPropertyCondition)
+
+   HttpEncodingAutoConfiguration#characterEncodingFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.CharacterEncodingFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpMessageConvertersAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.HttpMessageConverter' (OnClassCondition)
+      - NoneNestedConditions 0 matched 1 did not; NestedCondition on HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition.ReactiveWebApplication did not find reactive web application classes (HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition)
+
+   HttpMessageConvertersAutoConfiguration#messageConverters matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.http.HttpMessageConverters; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.StringHttpMessageConverter' (OnClassCondition)
+
+   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration#stringHttpMessageConverter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.StringHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+
+   JacksonAutoConfiguration.Jackson2ObjectMapperBuilderCustomizerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration#jacksonObjectMapperBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.Jackson2ObjectMapperBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration#jacksonObjectMapper matched:
+      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration.ParameterNamesModuleConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.module.paramnames.ParameterNamesModule' (OnClassCondition)
+
+   JacksonAutoConfiguration.ParameterNamesModuleConfiguration#parameterNamesModule matched:
+      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.module.paramnames.ParameterNamesModule; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+      - @ConditionalOnPreferredJsonMapper JACKSON no property was configured and Jackson is the default (OnPreferredJsonMapperCondition)
+      - @ConditionalOnBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) found bean 'jacksonObjectMapper' (OnBeanCondition)
+
+   JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration#mappingJackson2HttpMessageConverter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.MappingJackson2HttpMessageConverter ignored: org.springframework.hateoas.server.mvc.TypeConstrainedMappingJackson2HttpMessageConverter,org.springframework.data.rest.webmvc.alps.AlpsJsonHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcAutoConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+
+   MockMvcAutoConfiguration#dispatcherServlet matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcAutoConfiguration#dispatcherServletPath matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.servlet.DispatcherServletPath; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcConfiguration#mockMvc matched:
+      - @ConditionalOnMissingBean (types: org.springframework.test.web.servlet.MockMvc; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcConfiguration#mockMvcBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.test.web.servlet.MockMvcBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MockMvcTesterConfiguration matched:
+      - @ConditionalOnClass found required class 'org.assertj.core.api.Assert' (OnClassCondition)
+
+   MockMvcTesterConfiguration#mockMvcTester matched:
+      - @ConditionalOnMissingBean (types: org.springframework.test.web.servlet.assertj.MockMvcTester; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   NoOpCacheConfiguration matched:
+      - Cache org.springframework.boot.autoconfigure.cache.NoOpCacheConfiguration NONE cache type (CacheCondition)
+
+   SpringDataWebAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.data.web.PageableHandlerMethodArgumentResolver', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.PageableHandlerMethodArgumentResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringDataWebAutoConfiguration#pageableCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.PageableHandlerMethodArgumentResolverCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringDataWebAutoConfiguration#sortCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.SortHandlerMethodArgumentResolverCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringDataWebAutoConfiguration#springDataWebSettings matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.SpringDataWebSettings; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutionAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor' (OnClassCondition)
+
+   TaskExecutorConfigurations.AsyncConfigurerConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutorConfigurations.AsyncConfigurerConfiguration#applicationTaskExecutorAsyncConfigurer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration matched:
+      - AnyNestedCondition 1 matched 1 did not; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ModelCondition @ConditionalOnProperty (spring.task.execution.mode=force) did not find property 'spring.task.execution.mode'; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ExecutorBeanCondition @ConditionalOnMissingBean (types: java.util.concurrent.Executor; SearchStrategy: all) did not find any beans (TaskExecutorConfigurations.OnExecutorCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutor matched:
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskExecutorConfigurations.ThreadPoolTaskExecutorBuilderConfiguration#threadPoolTaskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ValidationAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'jakarta.validation.executable.ExecutableValidator' (OnClassCondition)
+      - @ConditionalOnResource found location classpath:META-INF/services/jakarta.validation.spi.ValidationProvider (OnResourceCondition)
+
+   ValidationAutoConfiguration#defaultValidator matched:
+      - @ConditionalOnMissingBean (types: jakarta.validation.Validator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ValidationAutoConfiguration#methodValidationPostProcessor matched:
+      - @ConditionalOnMissingBean (types: org.springframework.validation.beanvalidation.MethodValidationPostProcessor; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration#formContentFilter matched:
+      - @ConditionalOnBooleanProperty (spring.mvc.formcontent.filter.enabled=true) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.FormContentFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#flashMapManager matched:
+      - @ConditionalOnMissingBean (names: flashMapManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#localeResolver matched:
+      - @ConditionalOnMissingBean (names: localeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#themeResolver matched:
+      - @ConditionalOnMissingBean (names: themeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#viewNameTranslator matched:
+      - @ConditionalOnMissingBean (names: viewNameTranslator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.context.request.RequestContextListener,org.springframework.web.filter.RequestContextFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched:
+      - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found beans 'defaultViewResolver', 'beanNameViewResolver', 'mvcViewResolver'; @ConditionalOnMissingBean (names: viewResolver types: org.springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   Cache2kCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.cache2k.Cache2kBuilder' (OnClassCondition)
+
+   CacheAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.cache.interceptor.CacheAspectSupport; SearchStrategy: all) did not find any beans of type org.springframework.cache.interceptor.CacheAspectSupport (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.cache.CacheManager' (OnClassCondition)
+
+   CacheAutoConfiguration.CacheManagerEntityManagerFactoryDependsOnPostProcessor:
+      Did not match:
+         - Ancestor org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration did not match (ConditionEvaluationReport.AncestorsMatchedCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean' (OnClassCondition)
+
+   CaffeineCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.github.benmanes.caffeine.cache.Caffeine' (OnClassCondition)
+
+   CouchbaseCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   ErrorMvcAutoConfiguration.DefaultErrorViewResolverConfiguration#conventionErrorViewResolver:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) did not find any beans of type org.springframework.web.servlet.DispatcherServlet (OnBeanCondition)
+
+   FreeMarkerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'freemarker.template.Configuration' (OnClassCondition)
+
+   GenericCacheConfiguration:
+      Did not match:
+         - Cache org.springframework.boot.autoconfigure.cache.GenericCacheConfiguration unknown cache type (CacheCondition)
+
+   GroovyTemplateAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'groovy.text.markup.MarkupTemplateEngine' (OnClassCondition)
+
+   GsonAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
+
+   GsonHttpMessageConvertersConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
+
+   HazelcastCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+
+   HypermediaAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.hateoas.EntityModel' (OnClassCondition)
+
+   InfinispanCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.infinispan.spring.embedded.provider.SpringEmbeddedCacheManager' (OnClassCondition)
+
+   JCacheCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.cache.Caching' (OnClassCondition)
+
+   JacksonHttpMessageConvertersConfiguration.MappingJackson2XmlHttpMessageConverterConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.fasterxml.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
+
+   JsonbAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.json.bind.Jsonb' (OnClassCondition)
+
+   JsonbHttpMessageConvertersConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.json.bind.Jsonb' (OnClassCondition)
+
+   MessageSourceAutoConfiguration:
+      Did not match:
+         - ResourceBundle did not find bundle with basename messages (MessageSourceAutoConfiguration.ResourceBundleCondition)
+
+   MockMvcAutoConfiguration.WebTestClientMockMvcConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+
+   MockMvcSecurityConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors' (OnClassCondition)
+
+   MockMvcWebClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.htmlunit.WebClient' (OnClassCondition)
+
+   MockMvcWebDriverAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.openqa.selenium.htmlunit.HtmlUnitDriver' (OnClassCondition)
+
+   MustacheAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.samskivert.mustache.Mustache' (OnClassCondition)
+
+   OAuth2ClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.client.registration.ClientRegistration' (OnClassCondition)
+
+   OAuth2ClientWebSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+   OAuth2ResourceServerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.server.resource.authentication.BearerTokenAuthenticationToken' (OnClassCondition)
+
+   RedisCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.RedisConnectionFactory' (OnClassCondition)
+
+   Saml2RelyingPartyAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (OnClassCondition)
+
+   SecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.DefaultAuthenticationEventPublisher' (OnClassCondition)
+
+   SecurityFilterAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.http.SessionCreationPolicy' (OnClassCondition)
+
+   SimpleCacheConfiguration:
+      Did not match:
+         - Cache org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration unknown cache type (CacheCondition)
+
+   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilderVirtualThreads:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder' simpleAsyncTaskExecutorBuilder (OnBeanCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutorVirtualThreads:
+      Did not match:
+         - @ConditionalOnThreading did not find VIRTUAL (OnThreadingCondition)
+
+   ThymeleafAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.thymeleaf.spring6.SpringTemplateEngine' (OnClassCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+
+   WebMvcAutoConfiguration#hiddenHttpMethodFilter:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.mvc.hiddenmethod.filter.enabled=true) did not find property 'spring.mvc.hiddenmethod.filter.enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.ProblemDetailsErrorHandlingConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.mvc.problemdetails.enabled=true) did not find property 'spring.mvc.problemdetails.enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnEnabledResourceChain did not find class org.webjars.WebJarVersionLocator (OnEnabledResourceChainCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondition)
+
+   WebTestClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2026-05-10T22:57:26.206-04:00  INFO 17245 --- [fullstack_venta] [           main] c.f.fullstack_venta.VentaControllerTest  : Started VentaControllerTest in 2.826 seconds (process running for 3.867)
+2026-05-10T22:57:26.211-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 0, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.212-04:00 DEBUG 17245 --- [fullstack_venta] [           main] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.fullstack_venta.fullstack_venta.VentaControllerTest
+2026-05-10T22:57:26.212-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 1, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.216-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 2, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.244-04:00 DEBUG 17245 --- [fullstack_venta] [           main] sContextBeforeModesTestExecutionListener : Before test method: class [VentaControllerTest], method [cancelar_noExistente_retorna404], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2026-05-10T22:57:26.249-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 3, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.249-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 4, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.253-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 5, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.257-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 6, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.322-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : PATCH "/api/ventas/99/cancelar", parameters={}
+2026-05-10T22:57:26.336-04:00 DEBUG 17245 --- [fullstack_venta] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fullstack_venta.fullstack_venta.controller.VentaController#cancelar(Long)
+2026-05-10T22:57:26.433-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-10T22:57:26.434-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-05-10T22:57:26.436-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed 404 NOT_FOUND
+2026-05-10T22:57:26.446-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 7, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.447-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 8, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.449-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 9, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.449-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 10, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.449-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 11, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.450-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 12, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.452-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 13, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.453-04:00 DEBUG 17245 --- [fullstack_venta] [           main] .c.s.DirtiesContextTestExecutionListener : After test method: class [VentaControllerTest], method [cancelar_noExistente_retorna404], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+]]></system-out>
+    <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/krhisnaoyanedelyanez/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="obtenerPorUsuario_retorna200ConVentas" classname="com.fullstack_venta.fullstack_venta.VentaControllerTest" time="0.091">
+    <system-out><![CDATA[2026-05-10T22:57:26.462-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 14, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.463-04:00 DEBUG 17245 --- [fullstack_venta] [           main] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.fullstack_venta.fullstack_venta.VentaControllerTest
+2026-05-10T22:57:26.463-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 15, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.464-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 16, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.466-04:00 DEBUG 17245 --- [fullstack_venta] [           main] sContextBeforeModesTestExecutionListener : Before test method: class [VentaControllerTest], method [obtenerPorUsuario_retorna200ConVentas], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2026-05-10T22:57:26.466-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 17, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.466-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 18, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.467-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 19, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.471-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 20, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.476-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : GET "/api/ventas/usuario/5", parameters={}
+2026-05-10T22:57:26.476-04:00 DEBUG 17245 --- [fullstack_venta] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fullstack_venta.fullstack_venta.controller.VentaController#obtenerPorUsuario(Long)
+2026-05-10T22:57:26.490-04:00 DEBUG 17245 --- [fullstack_venta] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-10T22:57:26.491-04:00 DEBUG 17245 --- [fullstack_venta] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [[com.fullstack_venta.fullstack_venta.model.Venta@42ecc554]]
+2026-05-10T22:57:26.507-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed 200 OK
+2026-05-10T22:57:26.552-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 21, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.553-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 22, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.553-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 23, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.554-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 24, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.554-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 25, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.554-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 26, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.555-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 27, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.555-04:00 DEBUG 17245 --- [fullstack_venta] [           main] .c.s.DirtiesContextTestExecutionListener : After test method: class [VentaControllerTest], method [obtenerPorUsuario_retorna200ConVentas], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+]]></system-out>
+  </testcase>
+  <testcase name="obtenerPorId_existente_retorna200" classname="com.fullstack_venta.fullstack_venta.VentaControllerTest" time="0.016">
+    <system-out><![CDATA[2026-05-10T22:57:26.558-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 28, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.558-04:00 DEBUG 17245 --- [fullstack_venta] [           main] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.fullstack_venta.fullstack_venta.VentaControllerTest
+2026-05-10T22:57:26.559-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 29, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.559-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 30, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.561-04:00 DEBUG 17245 --- [fullstack_venta] [           main] sContextBeforeModesTestExecutionListener : Before test method: class [VentaControllerTest], method [obtenerPorId_existente_retorna200], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2026-05-10T22:57:26.562-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 31, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.563-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 32, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.564-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 33, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.565-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 34, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.567-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : GET "/api/ventas/1", parameters={}
+2026-05-10T22:57:26.567-04:00 DEBUG 17245 --- [fullstack_venta] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fullstack_venta.fullstack_venta.controller.VentaController#obtenerPorId(Long)
+2026-05-10T22:57:26.569-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-10T22:57:26.570-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.fullstack_venta.fullstack_venta.model.Venta@4269aad7]
+2026-05-10T22:57:26.570-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed 200 OK
+2026-05-10T22:57:26.572-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 35, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.572-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 36, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.573-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 37, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.573-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 38, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.573-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 39, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.574-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 40, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.575-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 41, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.575-04:00 DEBUG 17245 --- [fullstack_venta] [           main] .c.s.DirtiesContextTestExecutionListener : After test method: class [VentaControllerTest], method [obtenerPorId_existente_retorna200], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+]]></system-out>
+  </testcase>
+  <testcase name="obtenerPorId_noExistente_retorna404" classname="com.fullstack_venta.fullstack_venta.VentaControllerTest" time="0.012">
+    <system-out><![CDATA[2026-05-10T22:57:26.578-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 42, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.578-04:00 DEBUG 17245 --- [fullstack_venta] [           main] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.fullstack_venta.fullstack_venta.VentaControllerTest
+2026-05-10T22:57:26.578-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 43, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.579-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 44, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.581-04:00 DEBUG 17245 --- [fullstack_venta] [           main] sContextBeforeModesTestExecutionListener : Before test method: class [VentaControllerTest], method [obtenerPorId_noExistente_retorna404], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2026-05-10T22:57:26.582-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 45, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.582-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 46, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.583-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 47, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.584-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 48, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.586-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : GET "/api/ventas/99", parameters={}
+2026-05-10T22:57:26.586-04:00 DEBUG 17245 --- [fullstack_venta] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fullstack_venta.fullstack_venta.controller.VentaController#obtenerPorId(Long)
+2026-05-10T22:57:26.587-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-10T22:57:26.587-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-05-10T22:57:26.588-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed 404 NOT_FOUND
+2026-05-10T22:57:26.588-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 49, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.589-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 50, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.590-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 51, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.590-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 52, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.590-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 53, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.590-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 54, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.592-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 55, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.592-04:00 DEBUG 17245 --- [fullstack_venta] [           main] .c.s.DirtiesContextTestExecutionListener : After test method: class [VentaControllerTest], method [obtenerPorId_noExistente_retorna404], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+]]></system-out>
+  </testcase>
+  <testcase name="listar_retorna200ConListaDeVentas" classname="com.fullstack_venta.fullstack_venta.VentaControllerTest" time="0.019">
+    <system-out><![CDATA[2026-05-10T22:57:26.595-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 56, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.595-04:00 DEBUG 17245 --- [fullstack_venta] [           main] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.fullstack_venta.fullstack_venta.VentaControllerTest
+2026-05-10T22:57:26.595-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 57, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.596-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 58, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.600-04:00 DEBUG 17245 --- [fullstack_venta] [           main] sContextBeforeModesTestExecutionListener : Before test method: class [VentaControllerTest], method [listar_retorna200ConListaDeVentas], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2026-05-10T22:57:26.601-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 59, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.602-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 60, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.603-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 61, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.604-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 62, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.605-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : GET "/api/ventas", parameters={}
+2026-05-10T22:57:26.606-04:00 DEBUG 17245 --- [fullstack_venta] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fullstack_venta.fullstack_venta.controller.VentaController#listar()
+2026-05-10T22:57:26.607-04:00 DEBUG 17245 --- [fullstack_venta] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-10T22:57:26.608-04:00 DEBUG 17245 --- [fullstack_venta] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [[com.fullstack_venta.fullstack_venta.model.Venta@305e95a4, com.fullstack_venta.fullstack_venta.model (truncated)...]
+2026-05-10T22:57:26.609-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed 200 OK
+2026-05-10T22:57:26.610-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 63, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.611-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 64, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.611-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 65, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.612-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 66, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.612-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 67, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.612-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 68, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.613-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 69, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.614-04:00 DEBUG 17245 --- [fullstack_venta] [           main] .c.s.DirtiesContextTestExecutionListener : After test method: class [VentaControllerTest], method [listar_retorna200ConListaDeVentas], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+]]></system-out>
+  </testcase>
+  <testcase name="registrar_retorna201" classname="com.fullstack_venta.fullstack_venta.VentaControllerTest" time="0.207">
+    <system-out><![CDATA[2026-05-10T22:57:26.617-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 70, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.618-04:00 DEBUG 17245 --- [fullstack_venta] [           main] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.fullstack_venta.fullstack_venta.VentaControllerTest
+2026-05-10T22:57:26.618-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 71, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.619-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 72, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.621-04:00 DEBUG 17245 --- [fullstack_venta] [           main] sContextBeforeModesTestExecutionListener : Before test method: class [VentaControllerTest], method [registrar_retorna201], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2026-05-10T22:57:26.622-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 73, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.623-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 74, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.623-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 75, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.624-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 76, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.638-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : POST "/api/ventas", parameters={}
+2026-05-10T22:57:26.638-04:00 DEBUG 17245 --- [fullstack_venta] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fullstack_venta.fullstack_venta.controller.VentaController#registrar(VentaRequest)
+2026-05-10T22:57:26.675-04:00 DEBUG 17245 --- [fullstack_venta] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.fullstack_venta.fullstack_venta.model.VentaRequest@1a89414e]
+2026-05-10T22:57:26.820-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-10T22:57:26.821-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.fullstack_venta.fullstack_venta.model.Venta@29aa4bc9]
+2026-05-10T22:57:26.821-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed 201 CREATED
+2026-05-10T22:57:26.822-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 77, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.823-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 78, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.823-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 79, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.824-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 80, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.824-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 81, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.824-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 82, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.825-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 83, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.825-04:00 DEBUG 17245 --- [fullstack_venta] [           main] .c.s.DirtiesContextTestExecutionListener : After test method: class [VentaControllerTest], method [registrar_retorna201], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+]]></system-out>
+  </testcase>
+  <testcase name="cancelar_existente_retorna200ConEstadoCancelada" classname="com.fullstack_venta.fullstack_venta.VentaControllerTest" time="0.012">
+    <system-out><![CDATA[2026-05-10T22:57:26.827-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 84, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.828-04:00 DEBUG 17245 --- [fullstack_venta] [           main] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.fullstack_venta.fullstack_venta.VentaControllerTest
+2026-05-10T22:57:26.828-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 85, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.828-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 86, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.830-04:00 DEBUG 17245 --- [fullstack_venta] [           main] sContextBeforeModesTestExecutionListener : Before test method: class [VentaControllerTest], method [cancelar_existente_retorna200ConEstadoCancelada], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2026-05-10T22:57:26.830-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 87, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.831-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 88, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.831-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 89, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.832-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 90, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.834-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : PATCH "/api/ventas/1/cancelar", parameters={}
+2026-05-10T22:57:26.834-04:00 DEBUG 17245 --- [fullstack_venta] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fullstack_venta.fullstack_venta.controller.VentaController#cancelar(Long)
+2026-05-10T22:57:26.836-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-05-10T22:57:26.836-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.fullstack_venta.fullstack_venta.model.Venta@6c519e47]
+2026-05-10T22:57:26.836-04:00 DEBUG 17245 --- [fullstack_venta] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed 200 OK
+2026-05-10T22:57:26.838-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 91, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.838-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 92, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.838-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 93, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.839-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 94, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.839-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 95, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.839-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 96, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.840-04:00 DEBUG 17245 --- [fullstack_venta] [           main] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5c4f4330 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 97, missCount = 1, failureCount = 0]
+2026-05-10T22:57:26.840-04:00 DEBUG 17245 --- [fullstack_venta] [           main] .c.s.DirtiesContextTestExecutionListener : After test method: class [VentaControllerTest], method [cancelar_existente_retorna200ConEstadoCancelada], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+]]></system-out>
+  </testcase>
+</testsuite>

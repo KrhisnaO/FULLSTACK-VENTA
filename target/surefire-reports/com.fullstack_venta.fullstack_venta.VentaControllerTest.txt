@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.fullstack_venta.fullstack_venta.VentaControllerTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.874 s -- in com.fullstack_venta.fullstack_venta.VentaControllerTest
